@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+
+
+{% block content %}
+    <h1>tahrirlash </h1>
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        {% comment %} enctype="multipart/form-data rasm bilan ishliydi  {% endcomment %}
+        {{ form.as_p }}
+    <button class="bth btn-info ml-2" type="submit">saqlash</button>
+    </form>
+{% endblock content %}
